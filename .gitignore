@@ -131,3 +131,4 @@ dmypy.json
 # My appendings
 
 info.txt
+migrations
