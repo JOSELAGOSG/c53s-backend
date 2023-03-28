@@ -17,7 +17,7 @@ class Product(models.Model):
     UNIT_MEASUREMENT_CHOICES = [('unidad', 'un'), ('kilo', 'kg'), ('gramo', 'gr'), ('pote', 'pt')]
     name = models.CharField(max_length=100, unique=True)
     brand = models.ForeignKey(Brand, related_name='product', on_delete=models.PROTECT)
-    unit_measurement = models.CharField(choices=UNIT_MEASUREMENT_CHOICES, max_length=2)
+    unit_measurement = models.CharField(choices=UNIT_MEASUREMENT_CHOICES, max_length=6)
     soon_to_expire_weeks = models.IntegerField()
 
     def __str__(self):
